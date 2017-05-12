@@ -40,12 +40,10 @@ a `label` function from `scipy.ndimage` was used to find connected components (w
 False positives and false negatives were handled again by keeping history of detections
 and taking in consideration all of those detections at once.
 
-An awesome result
+The result
 ==
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+[![Lane & Vehicle Tracking Video](http://img.youtube.com/vi/DE3-EMXk1hE/0.jpg)](http://www.youtube.com/watch?v=DE3-EMXk1hE "Lane & Vehicle Tracking")
 
 
 Things to improve
