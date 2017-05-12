@@ -31,14 +31,9 @@ if __name__ == '__main__':
         final_boxes, components, heatmap, all_boxes = vd.run(frame)
         frame_with_lane_filled, frame_with_lines_n_windows_2d, thresholded_frame, radius_of_curvature = ld.run(frame)
 
-        # fc = FrameComposer(final_boxes)
-        # fc.add_mask_over_base(frame_with_lane_filled)
-        # fc.add_upper_bar((thresholded_frame, frame_with_lines_n_windows_2d, all_boxes))
-        # fc.add_text('Radius of curvature: {}'.format(radius_of_curvature))
-
-        fc = FrameComposer(all_boxes)
+        fc = FrameComposer(final_boxes)
         fc.add_mask_over_base(frame_with_lane_filled)
-        fc.add_upper_bar((thresholded_frame, frame_with_lines_n_windows_2d, final_boxes))
+        fc.add_upper_bar((thresholded_frame, frame_with_lines_n_windows_2d, all_boxes))
         fc.add_text('Radius of curvature: {}'.format(radius_of_curvature))
 
         return fc.get_frame()
